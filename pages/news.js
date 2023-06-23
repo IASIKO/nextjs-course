@@ -1,4 +1,4 @@
-function NewsPage(params) {
+function NewsPage() {
   return <h1>The News Page</h1>;
 }
 
