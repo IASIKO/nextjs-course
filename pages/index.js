@@ -18,7 +18,7 @@ const DUMMY_MEETUPS = [
     description: "This is a second meetup!",
   },
 ];
-console.log(DUMMY_MEETUPS)
+
 function HomePage(params) {
   return <MeetupList meetups={DUMMY_MEETUPS} />;
 }
