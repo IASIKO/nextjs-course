@@ -24,8 +24,8 @@ function HomePage(props) {
 }
 
 export async function getServerSideProps(context) {
-  const req = context.req
-  const res = context.res
+  const req = context.req;
+  const res = context.res;
 
   return {
     props: {
