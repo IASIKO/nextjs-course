@@ -23,27 +23,27 @@ function HomePage(props) {
   return <MeetupList meetups={props.meetups} />;
 }
 
-export async function getServerSideProps(context) {
-  const req = context.req;
-  const res = context.res;
-
-  return {
-    props: {
-      meetups: DUMMY_MEETUPS,
-    },
-  };
-}
-
-// export async function getStaticProps () {
-
-//   // fetch data from API
+// export async function getServerSideProps(context) {
+//   const req = context.req;
+//   const res = context.res;
 
 //   return {
 //     props: {
-//       meetups: DUMMY_MEETUPS
+//       meetups: DUMMY_MEETUPS,
 //     },
-//     revalidate: 1
-//   }
+//   };
 // }
+
+export async function getStaticProps () {
+
+  // fetch data from API
+
+  return {
+    props: {
+      meetups: DUMMY_MEETUPS
+    },
+    revalidate: 1
+  }
+}
 
 export default HomePage;
