@@ -1,27 +1,21 @@
+import { Fragment } from "react";
 import MeetupList from "../components/meetups/MeetupList";
 import { MongoClient } from "mongodb";
-
-const DUMMY_MEETUPS = [
-  {
-    id: "m1",
-    title: "The first meetup",
-    image:
-      "https://www.lookandlearn.com/history-images/preview/A/A400/A400007.jpg",
-    address: "First meetup street 5, 12345 Somde City",
-    description: "This is a first meetup!",
-  },
-  {
-    id: "m2",
-    title: "The second meetup",
-    image:
-      "https://www.lookandlearn.com/history-images/preview/A/A400/A400007.jpg",
-    address: "Second meetup street 10, 12345 Somde City",
-    description: "This is a second meetup!",
-  },
-];
+import Head from "next/head";
 
 function HomePage(props) {
-  return <MeetupList meetups={props.meetups} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>Next.js meetups</title>
+        <meta
+          name="description"
+          content="Browse a huge list of highly active React meetups"
+        />
+      </Head>
+      <MeetupList meetups={props.meetups} />
+    </Fragment>
+  );
 }
 
 // export async function getServerSideProps(context) {
@@ -45,7 +39,7 @@ export async function getStaticProps() {
 
   const meetups = await meetupsCollection.find().toArray();
 
-  client.close()
+  client.close();
 
   return {
     props: {
