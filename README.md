@@ -18,14 +18,24 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## MongoDB Integration
 
-To learn more about Next.js, take a look at the following resources:
+This project utilizes the MongoDB database for data storage and retrieval. To integrate MongoDB into your project, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Install the MongoDB driver using your package manager of choice:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+npm install mongodb
+# or
+yarn add mongodb
+# or
+pnpm install mongodb
+
+## Static Functions
+This project also takes advantage of Next.js's static functions for dynamic routing and pre-rendering. To create static pages, follow these steps:
+
+Create a function inside the pages directory (e.g., getStaticProps or getStaticPaths) to fetch or generate data for your static page.
+
+
 
 ## Deploy on Vercel
 
