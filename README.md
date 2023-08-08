@@ -34,11 +34,14 @@ yarn add mongodb
 # or
 pnpm install mongodb
 
-## Static Functions
-This project also takes advantage of Next.js's static functions for dynamic routing and pre-rendering. To create static pages, follow these steps:
+## Dynamic Routing and Pre-rendering
+This project takes advantage of Next.js's static functions for dynamic routing and pre-rendering. To create static pages, follow these steps:
 
 Create a function inside the pages directory (e.g., getStaticProps or getStaticPaths) to fetch or generate data for your static page.
+Leverage the power of getStaticProps and getStaticPaths to pre-render static pages with data.
 
+## SEO and Page Meta Tags
+For enhanced SEO (Search Engine Optimization) and improved social sharing, this project implements meta tags. Meta tags help control how your website appears when shared on platforms like search engines and social media.
 
 
 ## Deploy on Vercel
